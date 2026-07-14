@@ -445,9 +445,6 @@ p {
 
 
 
-
-
-
 .scroll-card img {
   width: 100%;
   display: block;
@@ -663,10 +660,10 @@ p {
   transform: translateY(-4px);
 }
 
-#lifestyle {
+.lifestyle {
   background-color: white;
   display: flex;
-  width: 100%;
+  height: auto;
 }
 
 .coluna {
@@ -675,7 +672,9 @@ p {
   justify-content: center;
   align-items: center;
 }
-
+.coluna img{
+  height: 600px;
+}
 .conteudo {
   max-width: 500px;
 }
