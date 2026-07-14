@@ -307,7 +307,7 @@ a {
 }
 
 .hero-img {
-  positio: relative;
+  position: relative;
   z-index: 2;
 
   margin-right: -90px;
@@ -332,12 +332,6 @@ a {
   margin-bottom: auto;
 }
 
-#hero .hero-txt {
-  width: 50%;
-  margin: 0 auto;
-  margin-top: auto;
-  margin-bottom: auto;
-}
 
 .txt-chapeu {
   letter-spacing: 2px;
@@ -449,34 +443,7 @@ a {
 
 
 
-/* Desktop: seção "pinada" com scroll lateral controlado por JS (ver script.js) */
-@media (min-width: 900px) {
-  .horizontal-scroll-section {
-    position: relative;
-    /* altura extra = "tempo" de scroll vertical convertido em deslocamento horizontal */
-    height: 220vh;
-  }
 
-  .horizontal-scroll-section .scroll-wrapper {
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    padding: 0;
-    scroll-snap-type: none;
-  }
-
-  .horizontal-scroll-section .scroll-track {
-    padding: 0 8vw;
-    will-change: transform;
-  }
-
-  .horizontal-scroll-section .scroll-card {
-    min-width: 45vw;
-  }
-}
 
 .scroll-card img {
   width: 100%;
@@ -713,12 +680,68 @@ a {
   height: 200px;
   background-color: rebeccapurple;
 }
+/* Desktop: seção "pinada" com scroll lateral controlado por JS (ver script.js) */
+
+  .horizontal-scroll-section {
+    position: relative;
+    /* altura extra = "tempo" de scroll vertical convertido em deslocamento horizontal */
+    height: 220vh;
+  }
+
+  .horizontal-scroll-section .scroll-wrapper {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 0;
+    scroll-snap-type: none;
+  }
+
+  .horizontal-scroll-section .scroll-track {
+    padding: 0 8vw;
+    will-change: transform;
+  }
+
+  .horizontal-scroll-section .scroll-card {
+    min-width: 45vw;
+  }
+
 
 /* RESPONSIVE */
+@media (max-width: 992px){
+  .hero-img img{
+    max-width: 380px;
+  }
+  .hero-img{
+    margin-right: -60px;
+  }
+  .efeito-vidro{
+    padding: 35px;
+  }
+}
+
 
 @media (max-width: 768px) {
   #hero{
-    display: block;
+    flex-direction: column;
+    width: 90%;
+    margin: 50px auto;
+  }
+  .hero-img{
+    margin-right: 0;
+    margin-bottom: -60px;
+  }
+  .hero-img img{
+    max-width: 320px;
+  }
+  .hero-txt{
+    max-width: 100%;
+  }
+  .efeito-vidro{
+    padding: 30px 20px;
+    text-align: center;
   }
 }
 
