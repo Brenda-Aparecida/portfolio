@@ -840,7 +840,7 @@ a {
 }
 
 /* RESPONSIVO PARA MOBILE */
-@media (max-width: 768px) {
+@media (min-width: 425px) {
 
   h1{
       font-size: 80px;
@@ -857,6 +857,7 @@ a {
   .btn .btn-secondary{
     padding: 10px 15px;
   }
+
   /* HERO */
   #hero{
     flex-direction: column;
@@ -911,7 +912,7 @@ a {
 
   /* SOBRE MIM */
   .card-imagem{
-    height: 280px;
+    /* height: 280px; */
     border-radius: 0px 0px 16px 16px;
   }
 
