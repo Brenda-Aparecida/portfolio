@@ -237,6 +237,8 @@ a {
     rgba(255, 255, 255, 0)
   );
   animation: loaderLoop 1.3s linear infinite;
+
+  will-change: transform;
 }
 
 .bg-circle {
@@ -273,11 +275,11 @@ a {
 
 @keyframes loaderLoop {
   from {
-    left: -40%;
+    transform: translateX(0);
   }
 
   to {
-    left: 100%;
+    transform: translateX(300%);
   }
 }
 
