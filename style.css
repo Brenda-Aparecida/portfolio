@@ -345,7 +345,8 @@ a {
 #goals .container {
   padding: 0px;
 }
-#goals h1, #goals p {
+#goals h1,
+#goals p {
   text-align: left;
 }
 
@@ -434,15 +435,15 @@ a {
 }
 
 /* Sobre mim */
-.hero-img img{
-    width:100%;
-    max-width:550px;
-    height:auto;
+.hero-img img {
+  width: 100%;
+  max-width: 550px;
+  height: auto;
 }
-.coluna img{
-    width:100%;
-    max-width:600px;
-    height:auto;
+.coluna img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
 }
 #sobre {
   background: rgba(255, 255, 255, 0.188);
@@ -459,10 +460,6 @@ a {
 
 #sobre p {
   text-align: center;
-}
-
-#sobre h1 {
-  font-size: 70px;
 }
 
 .persona {
@@ -587,8 +584,6 @@ a {
   border-radius: 20px;
 }
 
-
-
 .social-icons {
   display: flex;
   gap: 16px;
@@ -614,13 +609,13 @@ a {
   transform: translateY(-4px);
 }
 
-.lifestyle {
+#lifestyle {
   background-color: white;
   display: flex;
   height: auto;
   padding: 50px 0px;
 }
-.lifestyle .container {
+#lifestyle .container {
   display: flex;
 }
 
@@ -634,41 +629,40 @@ a {
   height: 600px;
 }
 
-
 /* CONTATO */
-#contato{
+#contato {
   background-image: url(images/bg-contato.jpg);
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
   background-attachment: scroll;
-  overflow-x: hidden; 
+  overflow-x: hidden;
 }
-#contato .conteudo{
+#contato .conteudo {
   justify-content: center;
   align-items: center;
   margin: 60px auto;
 }
-#contato .efeito-vidro{
+#contato .efeito-vidro {
   width: 100%;
 }
 .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
 }
-.icones-social i{
+.icones-social i {
   color: white;
 }
-#conteudo .botoes{
+#conteudo .botoes {
   display: flex;
 }
-.btn-contato{
+.btn-contato {
   flex: 1;
   text-align: right;
 }
-.icones-social{
+.icones-social {
   flex: 1;
   text-align: left;
   font-size: 30px;
@@ -676,23 +670,23 @@ a {
   gap: 30px;
 }
 .social-icons a {
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
 
-    border-radius: 50%;
-    background: white;
+  border-radius: 50%;
+  background: white;
 
-    text-decoration: none;
-    font-size: 28px;
+  text-decoration: none;
+  font-size: 28px;
 
-    box-shadow: 0 6px 16px rgba(0,0,0,.08);
-    transition: .3s;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
 }
 
 .social-icons a:hover {
-    transform: translateY(-5px);
-    background: var(--coral);
-    color: white;
+  transform: translateY(-5px);
+  background: var(--coral);
+  color: white;
 }
 
 /* Desktop: seção "pinada" com scroll lateral controlado por JS (ver script.js) */
@@ -723,18 +717,25 @@ a {
   min-width: 45vw;
 }
 
+/* RESPONSIVO PARA TABLET */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 72px;
+  }
 
+  h2 {
+    font-size: 52px;
+  }
 
-
-
-
-
-
-
-
-
-/* RESPONSIVE */
-@media (max-width: 992px) {
+  p {
+    font-size: 18px;
+  }
+  .container {
+    max-width: 1170px;
+    width: 100%;
+    padding-inline: 20px;
+    margin: auto;
+  }
   .hero-img img {
     max-width: 380px;
   }
@@ -746,9 +747,40 @@ a {
   .efeito-vidro {
     padding: 35px;
   }
-}
 
-@media (max-width: 768px) {
+  #sobre {
+    margin-bottom: 70px;
+  }
+
+  #contato .botoes {
+    flex-direction: column;
+  }
+
+  .btn-contato {
+    text-align: center;
+  }
+
+  .icones-social {
+    justify-content: center;
+  }
+
+  .horizontal-scroll-section {
+    height: auto;
+  }
+
+  .horizontal-scroll-section .scroll-wrapper {
+    position: static;
+    height: auto;
+    overflow-x: auto;
+  }
+
+  .horizontal-scroll-section .scroll-track {
+    transform: none !important;
+  }
+
+  .horizontal-scroll-section .scroll-card {
+    min-width: 80vw;
+  }
   h1 {
     font-size: 70px;
     line-height: 1;
@@ -774,164 +806,117 @@ a {
   }
 }
 
+/* MOBILE */
+@media (max-width: 430px) {
+  h1 {
+    font-size: 65px;
+  }
+
+  h2 {
+    font-size: 60px;
+    font-weight: 300;
+  }
+
+  p {
+    font-size: 20px;
+  }
+  .btn .btn-secondary {
+    padding: 10px 15px;
+  }
+
+  /* HERO */
+  #hero {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .hero-img {
+    margin-bottom: -100px;
+  }
+
+  .hero-img img {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .hero-txt {
+    width: 100%;
+  }
+
+  .efeito-vidro {
+    padding: 25px;
+  }
+
+  /* PROJETOS */
+
+  .horizontal-scroll-section {
+    height: auto;
+    margin-top: 50px;
+  }
+
+  .horizontal-scroll-section .scroll-wrapper {
+    position: static;
+    height: auto;
+    overflow-x: auto;
+  }
+
+  .horizontal-scroll-section .scroll-track {
+    transform: none !important;
+  }
+
+  .scroll-card {
+    min-width: 90vw;
+    height: auto;
+  }
+
+  .scroll-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* SOBRE MIM */
+  .card-imagem {
+    /* height: 280px; */
+    border-radius: 0px 0px 16px 16px;
+  }
+
+  .persona {
+    padding: 30px 20px;
+  }
+
+  /* EXPERIENCIA FORMACAO */
+  #expertise {
+    display: inline;
+  }
+
+  #expertise .experiencia {
+    border-radius: 16px 16px 0px 0px;
+  }
+  #expertise .formacao {
+    border-radius: 0px 0px 16px 16px;
+  }
+
+  /* HARD SOFT SKILLS */
+  .two-col {
+    display: block;
+  }
+
+  /* lifestyle */
+  #lifestyle {
+    background-color: #666;
+  }
+  .coluna-txt {
+    background-color: #edd0c9;
+  }
+  .coluna-img {
+    background-color: #cdeee1;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-}
-
-
-/* RESPONSIVO PARA TABLET */
-@media (max-width: 992px){
-
-   h1{
-        font-size:72px;
-    }
-
-    h2{
-        font-size:52px;
-    }
-
-    p{
-        font-size:18px;
-    }
-    .container{
-        max-width:1170px;
-        width:100%;
-        padding-inline:20px;
-        margin:auto;
-    }
-
-    #sobre{
-      margin-bottom: 70px;
-    }
-
-     #contato .botoes{
-        flex-direction:column;
-    }
-
-    .btn-contato{
-        text-align:center;
-    }
-
-    .icones-social{
-        justify-content:center;
-    }
-
-     .horizontal-scroll-section{
-        height:auto;
-    }
-
-    .horizontal-scroll-section .scroll-wrapper{
-        position:static;
-        height:auto;
-        overflow-x:auto;
-    }
-
-    .horizontal-scroll-section .scroll-track{
-        transform:none !important;
-    }
-
-    .horizontal-scroll-section .scroll-card{
-        min-width:80vw;
-    }
-}
-
-/* RESPONSIVO PARA MOBILE */
-@media (min-width: 425px) {
-
-  h1{
-      font-size: 80px;
-  }
-
-  h2{
-      font-size: 60px;
-      font-weight: 300;
-  }
-
-  p{
-      font-size: 20px;
-  }
-  .btn .btn-secondary{
-    padding: 10px 15px;
-  }
-
-  /* HERO */
-  #hero{
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .hero-img{
-      margin-bottom: -100px;
-  }
-
-  .hero-img img{
-      width: 100%;
-      max-width: 320px;
-  }
-
-  .hero-txt{
-      width: 100%;
-  }
-
-  .efeito-vidro{
-      padding: 25px;
-  }
-
-
-/* PROJETOS */
-
-  .horizontal-scroll-section{
-      height: auto;
-      margin-top: 50px;
-  }
-
-  .horizontal-scroll-section .scroll-wrapper{
-      position: static;
-      height: auto;
-      overflow-x: auto;
-  }
-
-  .horizontal-scroll-section .scroll-track{
-      transform: none !important;
-  }
-
-  .scroll-card{
-      min-width: 90vw;
-      height: auto;
-  }
-
-  .scroll-card img{
-      width: 100%;
-      height: auto;
-  }
-
-
-  /* SOBRE MIM */
-  .card-imagem{
-    /* height: 280px; */
-    border-radius: 0px 0px 16px 16px;
-  }
-
-  .persona{
-      padding: 30px 20px;
-  }
-
-  /* EXPERIENCIA FORMACAO */
-  #expertise{
-    display: inline;
-  }
-
-  #expertise .experiencia{
-    border-radius: 16px 16px 0px 0px;
-
-  }
-  #expertise .formacao{
-    border-radius: 0px 0px 16px 16px;
-  }
-
-
 }
