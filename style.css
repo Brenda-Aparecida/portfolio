@@ -842,19 +842,24 @@ a {
 /* RESPONSIVO PARA MOBILE */
 @media (max-width: 430px) {
   h1 {
-    font-size: 65px;
+    font-size: 60px;
+    font-weight: 300px;
   }
 
   h2 {
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 300;
   }
 
   p {
     font-size: 20px;
   }
-  .btn .btn-secondary {
-    padding: 10px 15px;
+
+  .btn,
+  .btn-secondary,
+  a {
+    margin: 0px;
+    padding: 10px 10px;
   }
 
   /* PRELOADER */
@@ -938,6 +943,10 @@ a {
   .efeito-vidro {
     padding: 25px;
   }
+  /* GOALS*/
+  #goals {
+    padding: 0px 0px 20px 0px;
+  }
 
   /* PROJETOS */
 
@@ -968,7 +977,6 @@ a {
 
   /* SOBRE MIM */
   .card-imagem {
-    /* height: 280px; */
     border-radius: 0px 0px 16px 16px;
   }
 
