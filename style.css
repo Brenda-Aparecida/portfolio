@@ -354,7 +354,6 @@ a {
   padding: 50px;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -952,7 +951,13 @@ a {
 
   .horizontal-scroll-section {
     height: auto;
-    margin-top: 50px;
+    margin-top: 30px;
+  }
+  #projetos h1 {
+    padding: 0px;
+  }
+  #projetos {
+    padding: 40px 0px;
   }
 
   .horizontal-scroll-section .scroll-wrapper {
@@ -961,6 +966,10 @@ a {
     overflow-x: auto;
   }
 
+  #projetos .cta h1 {
+    font-size: 50px;
+    padding: 30px;
+  }
   .horizontal-scroll-section .scroll-track {
     transform: none !important;
   }
@@ -968,11 +977,31 @@ a {
   .scroll-card {
     min-width: 90vw;
     height: auto;
+    padding: 0px;
+    margin-bottom: 50px;
+    border: 1px solid rgb(255, 255, 255);
   }
 
   .scroll-card img {
     width: 100%;
     height: auto;
+  }
+
+  /* barra de progresso nas telas */
+
+  .scroll-wrapper::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .scroll-wrapper::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 999px;
+    margin: 0 40px;
+  }
+
+  .scroll-wrapper::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, var(--coral), var(--coral-dark));
+    border-radius: 999px;
   }
 
   /* SOBRE MIM */
