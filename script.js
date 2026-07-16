@@ -6,7 +6,7 @@ window.addEventListener('load', function () {
     setTimeout(function () {
       loader.remove();
     }, 900);
-  }, 500);
+  }, 2000);
 });
 
 // Efeito de scroll horizontal "pinado" na seção de projetos (só desktop)

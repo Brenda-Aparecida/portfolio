@@ -149,6 +149,7 @@ a {
 }
 
 /* PRELOADER */
+
 #preloader {
   position: fixed;
   inset: 0;
@@ -167,8 +168,17 @@ a {
   opacity: 0;
   visibility: hidden;
 }
+#preloader.hide .preloader-card {
+  transform: translateY(-40px) scale(0.97);
+
+  opacity: 0;
+
+  transition: 0.8s;
+}
 
 .preloader-card {
+  width: 430px;
+  max-width: 90%;
   padding: 45px;
   background: white;
   border-radius: 18px;
@@ -203,8 +213,9 @@ a {
 }
 
 .loader-bar {
+  width: 100%;
   margin-top: 35px;
-  height: 2px;
+  height: 4px;
   background: #f2f2f2;
   overflow: hidden;
   position: relative;
@@ -214,10 +225,18 @@ a {
 .loader-bar span {
   position: absolute;
   top: 0;
-  left: -40%;
+  left: -50%;
+  width: 50%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, var(--pink), transparent);
-  animation: loaderLoop 1.1s linear infinite;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0),
+    rgba(255, 123, 157, 0.2),
+    rgba(255, 123, 157, 1),
+    rgba(255, 123, 157, 0.2),
+    rgba(255, 255, 255, 0)
+  );
+  animation: loaderLoop 1.3s linear infinite;
 }
 
 .bg-circle {
@@ -231,12 +250,14 @@ a {
 
 .circle1 {
   height: 120px;
+  width: 120px;
   left: 12%;
   top: 20%;
 }
 
 .circle2 {
   height: 180px;
+  width: 180px;
   right: 12%;
   top: 12%;
   animation-delay: 2s;
@@ -244,6 +265,7 @@ a {
 
 .circle3 {
   height: 140px;
+  width: 140px;
   right: 22%;
   bottom: 15%;
   animation-delay: 4s;
@@ -374,8 +396,12 @@ a {
 }
 
 /* HORIZONTAL SCROLL PROJECTS Seleção de telas*/
+#projetos .section {
+  padding: 0px;
+}
 #projetos h1 {
   text-align: center;
+  padding-top: 50px;
 }
 
 .scroll-wrapper {
@@ -545,7 +571,7 @@ a {
 }
 
 .skill-bar {
-  height: 40px;
+  height: 20px;
   background: var(--light-bg);
   border-radius: 5px;
   overflow: hidden;
@@ -618,7 +644,12 @@ a {
 #lifestyle .container {
   display: flex;
 }
-
+.desktop img {
+  display: block;
+}
+.mobile img {
+  display: none;
+}
 .coluna {
   flex: 1;
   display: flex;
@@ -806,7 +837,7 @@ a {
   }
 }
 
-/* MOBILE */
+/* RESPONSIVO PARA MOBILE */
 @media (max-width: 430px) {
   h1 {
     font-size: 65px;
@@ -822,6 +853,65 @@ a {
   }
   .btn .btn-secondary {
     padding: 10px 15px;
+  }
+
+  /* PRELOADER */
+  .preloader-card {
+    width: 90%;
+    max-width: 320px;
+
+    padding: 30px 25px;
+
+    border-radius: 16px;
+  }
+
+  .small-title {
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 10px;
+  }
+
+  .preloader-card h1 {
+    font-size: 48px;
+    line-height: 1;
+  }
+
+  .preloader-card p {
+    margin-top: 15px;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+  }
+
+  .loader-bar {
+    margin-top: 28px;
+  }
+
+  .circle1 {
+    width: 80px;
+    height: 80px;
+
+    left: -20px;
+    top: 12%;
+  }
+
+  .circle2 {
+    width: 120px;
+    height: 120px;
+
+    right: -35px;
+    top: 8%;
+  }
+
+  .circle3 {
+    width: 100px;
+    height: 100px;
+
+    right: -25px;
+    bottom: 10%;
   }
 
   /* HERO */
@@ -903,13 +993,22 @@ a {
 
   /* lifestyle */
   #lifestyle {
-    background-color: #666;
+    padding: 0px 0px 25px 0px;
   }
-  .coluna-txt {
-    background-color: #edd0c9;
+  #lifestyle .container {
+    flex-direction: column;
   }
-  .coluna-img {
-    background-color: #cdeee1;
+  #lifestyle .txt {
+    text-align: center;
+  }
+
+  .desktop img {
+    display: none;
+  }
+  .mobile img {
+    display: block;
+    width: 100%;
+    height: auto;
   }
 }
 
