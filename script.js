@@ -74,6 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // SCROLL DOS PROJETOS NO MOBILE
 const wrapper = document.querySelector(".scroll-wrapper");
 const progress = document.querySelector(".scroll-progress");
+const indicator = document.querySelector(".scroll-indicator");
 
 if(wrapper && progress){
 
@@ -88,6 +89,12 @@ if(wrapper && progress){
             : 0;
 
         progress.style.width = percent + "%";
+
+       if (wrapper.scrollLeft > 10) {
+        indicator.classList.add("scrolled");
+      } else {
+    indicator.classList.remove("scrolled");
+    }
     }
 
     wrapper.addEventListener("scroll", updateBar);
