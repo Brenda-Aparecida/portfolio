@@ -70,3 +70,27 @@ document.addEventListener('DOMContentLoaded', function () {
     observer.observe(bar);
   });
 });
+
+// SCROLL DOS PROJETOS NO MOBILE
+const wrapper = document.querySelector(".scroll-wrapper");
+const progress = document.querySelector(".scroll-progress");
+
+if(wrapper && progress){
+
+    function updateBar(){
+
+        const max =
+            wrapper.scrollWidth - wrapper.clientWidth;
+
+        const percent =
+            max > 0
+            ? wrapper.scrollLeft / max * 100
+            : 0;
+
+        progress.style.width = percent + "%";
+    }
+
+    wrapper.addEventListener("scroll", updateBar);
+
+    updateBar();
+}
