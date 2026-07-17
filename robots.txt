@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://brenda-aparecida.github.io/portfolio/sitemap.xml
