@@ -842,12 +842,12 @@ a {
 /* RESPONSIVO PARA MOBILE */
 @media (max-width: 430px) {
   h1 {
-    font-size: 60px;
+    font-size: 80px;
     font-weight: 300px;
   }
 
   h2 {
-    font-size: 50px;
+    font-size: 60px;
     font-weight: 300;
   }
 
@@ -1076,6 +1076,9 @@ a {
   }
 
   /* SOBRE MIM */
+  #sobre {
+    margin: 0px;
+  }
   .card-imagem {
     border-radius: 0px 0px 16px 16px;
   }
@@ -1087,6 +1090,9 @@ a {
   /* EXPERIENCIA FORMACAO */
   #expertise {
     display: inline;
+  }
+  #expertise h2 {
+    text-align: left;
   }
 
   #expertise .experiencia {
@@ -1101,6 +1107,9 @@ a {
     display: block;
   }
 
+  .section {
+    padding-top: 0px;
+  }
   /* lifestyle */
   #lifestyle {
     padding: 0px 0px 25px 0px;
@@ -1110,6 +1119,9 @@ a {
   }
   #lifestyle .txt {
     text-align: center;
+  }
+  #lifestyle .conteudo .btn {
+    margin-top: 30px 0px;
   }
 
   .desktop img {
